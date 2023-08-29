@@ -25,4 +25,8 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
+    public Cliente atualizarCliente(Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
+
 }

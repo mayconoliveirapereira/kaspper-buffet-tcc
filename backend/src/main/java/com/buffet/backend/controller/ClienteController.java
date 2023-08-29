@@ -37,4 +37,22 @@ public class ClienteController {
         return ResponseEntity.ok(clientes);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Cliente> atualizarCliente(@PathVariable Long id, @RequestBody Cliente cliente) {
+        Cliente clienteExistente = clienteService.buscarClientePorId(id);
+
+        if (clienteExistente != null) {
+            clienteExistente.setName(cliente.getName());
+            clienteExistente.setEmail(cliente.getEmail());
+            clienteExistente.setpNo(cliente.getpNo());
+            clienteExistente.setAddress(cliente.getAddress());
+            clienteExistente.setTipoEvento(cliente.getTipoEvento());
+
+            Cliente clienteAtualizado = clienteService.atualizarCliente(clienteExistente);
+            return ResponseEntity.ok(clienteAtualizado);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
