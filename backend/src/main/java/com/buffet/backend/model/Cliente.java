@@ -17,6 +17,7 @@ public class Cliente {
 	private String email;
 	private String pNo; //phone Number
 	private String address;
+	private String tipoEvento;
 	
 	
 	public long getId() {
@@ -49,9 +50,14 @@ public class Cliente {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
-	
-	
-	
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getTipoEvento() {
+		return tipoEvento;
+	}
+	public void setTipoEvento(String tipoEvento) {
+		this.tipoEvento = tipoEvento;
+	}
 }
