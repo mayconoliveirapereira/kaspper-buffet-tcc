@@ -55,4 +55,17 @@ public class ClienteController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> excluirClientePorId(@PathVariable Long id) {
+        Cliente clienteExistente = clienteService.buscarClientePorId(id);
+
+        if (clienteExistente != null) {
+            clienteService.excluirClientePorId(id);
+            String mensagem = "O cliente " + clienteExistente.getName() + " foi deletado com sucesso.";
+            return ResponseEntity.ok(mensagem);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
