@@ -1,29 +1,17 @@
 package com.buffet.backend.service;
 
-import java.util.List;
-
+import com.buffet.backend.model.Cliente;
+import com.buffet.backend.repository.ClienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.buffet.backend.model.Cliente;
-
 @Service
-public interface ClienteService {
+public class ClienteService {
 
-	//create cliente
-	public Cliente createCliente(Cliente cliente);
-	
-	
-	//read users - Listar
-	public List<Cliente> getCliente();
-	
-	//read cliente by id - Listar pelo id
-	public Cliente getClienteById(long id);
-	
-	//delete cliente by id
-	public void  deleteCliente(long id);
-	
-	
-	//update cliente by id
-	public Cliente updateCliente(Cliente cliente, long id);
-	
+    @Autowired
+    private ClienteRepository clienteRepository;
+
+    public Cliente createCliente(Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
 }
