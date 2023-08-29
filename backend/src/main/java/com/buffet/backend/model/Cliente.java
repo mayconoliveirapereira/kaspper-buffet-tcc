@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name="cliente_table")
 public class Cliente {
@@ -18,6 +20,9 @@ public class Cliente {
 	private String pNo; //phone Number
 	private String address;
 	private String tipoEvento;
+
+	private LocalDate dataEvento;
+
 	
 	
 	public long getId() {
@@ -59,5 +64,13 @@ public class Cliente {
 	}
 	public void setTipoEvento(String tipoEvento) {
 		this.tipoEvento = tipoEvento;
+	}
+
+	public LocalDate getDataEvento() {
+		return dataEvento;
+	}
+
+	public void setDataEvento(LocalDate dataEvento) {
+		this.dataEvento = dataEvento;
 	}
 }
