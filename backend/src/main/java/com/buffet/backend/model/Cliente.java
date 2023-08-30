@@ -23,6 +23,8 @@ public class Cliente {
 
 	private LocalDate dataEvento;
 
+	private Integer qtdConvidados;
+
 	
 	
 	public long getId() {
@@ -72,5 +74,13 @@ public class Cliente {
 
 	public void setDataEvento(LocalDate dataEvento) {
 		this.dataEvento = dataEvento;
+	}
+
+	public Integer getQtdConvidados() {
+		return qtdConvidados;
+	}
+
+	public void setQtdConvidados(Integer qtdConvidados) {
+		this.qtdConvidados = qtdConvidados;
 	}
 }

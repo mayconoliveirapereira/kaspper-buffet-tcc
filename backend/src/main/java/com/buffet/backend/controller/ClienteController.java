@@ -48,6 +48,7 @@ public class ClienteController {
             clienteExistente.setAddress(cliente.getAddress());
             clienteExistente.setTipoEvento(cliente.getTipoEvento());
             clienteExistente.setDataEvento(cliente.getDataEvento());
+            clienteExistente.setQtdConvidados(cliente.getQtdConvidados());
 
             Cliente clienteAtualizado = clienteService.atualizarCliente(clienteExistente);
             return ResponseEntity.ok(clienteAtualizado);
