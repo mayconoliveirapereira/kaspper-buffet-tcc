@@ -20,9 +20,7 @@ public class Cliente {
 	private String pNo; //phone Number
 	private String address;
 	private String tipoEvento;
-
 	private LocalDate dataEvento;
-
 	private Integer qtdConvidados;
 
 	
@@ -57,30 +55,15 @@ public class Cliente {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getTipoEvento() {
 		return tipoEvento;
 	}
-	public void setTipoEvento(String tipoEvento) {
-		this.tipoEvento = tipoEvento;
-	}
-
-	public LocalDate getDataEvento() {
-		return dataEvento;
-	}
-
-	public void setDataEvento(LocalDate dataEvento) {
-		this.dataEvento = dataEvento;
-	}
-
-	public Integer getQtdConvidados() {
-		return qtdConvidados;
-	}
-
-	public void setQtdConvidados(Integer qtdConvidados) {
-		this.qtdConvidados = qtdConvidados;
-	}
+	public void setTipoEvento(String tipoEvento) {this.tipoEvento = tipoEvento;}
+	public LocalDate getDataEvento() {return dataEvento;}
+	public void setDataEvento(LocalDate dataEvento) {this.dataEvento = dataEvento;}
+	public Integer getQtdConvidados() {return qtdConvidados;}
+	public void setQtdConvidados(Integer qtdConvidados) {this.qtdConvidados = qtdConvidados;}
 }
